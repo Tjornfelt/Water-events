@@ -1,7 +1,14 @@
 ﻿/*Fonts and colors ONLY*/
+/*Blues*/
+/*Reds*/
+/*Greens*/
+/*Singles*/
 /* Contains global reusable elements as well as bootstrap overrides */
 html {
   font-size: 14px; }
+
+body {
+  font-family: Calibri; }
 
 img {
   max-width: 100%; }
@@ -17,11 +24,12 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2.8em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   margin-bottom: 1em; }
 
 h2 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  margin-bottom: 0.5em; }
 
 p {
   font-size: 1em;
@@ -35,9 +43,13 @@ p {
   padding-left: 10px;
   padding-right: 10px; }
 
+.content-page {
+  margin-top: -230px; }
+
 .btn {
   padding: 0 20px;
-  display: inline-block; }
+  display: inline-block;
+  border-radius: 0; }
   .btn.full {
     width: 100%; }
   .btn.btn-default {
@@ -46,9 +58,16 @@ p {
     background: #f06363;
     font-size: 1.5em;
     color: #ffffff;
-    border: none; }
+    border: none;
+    padding: 0 80px; }
     .btn.btn-default:hover {
       background: #d04141; }
+  .btn.btn-map {
+    background: #74c984;
+    padding: 5px 50px;
+    color: #ffffff; }
+    .btn.btn-map:hover {
+      background: #52a762; }
 
 .content {
   padding: 15px; }

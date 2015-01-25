@@ -1,0 +1,51 @@
+﻿@model WaterEvents.Models.LocationsModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row locations-page main content-page">
+    <div class="col-sm-10 col-sm-push-1">
+        <div class="row">
+            <h1 class="text-center">@Model.Header</h1>
+            @Model.BodyText
+        </div>
+        <div class="locations-wrapper">
+            @RenderLocationRegion()
+            @RenderLocationRegion()
+            @RenderLocationRegion()
+        </div>
+        <div class="row">
+            @Model.PostBodyText
+        </div>
+    </div>
+</div>
+
+@helper RenderLocationRegion()
+{
+    <div class="row region">
+        <div class="col-sm-10 col-sm-push-1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Sjælland</h2>
+                </div>
+            </div>
+            @RenderLocation()
+            @RenderLocation()
+            @RenderLocation()
+            @RenderLocation()
+
+        </div>
+    </div>    
+}
+
+@helper RenderLocation()
+{
+    <div class="row location">
+        <div class="col-sm-7">
+            Søernes Sejlklub (ved Søpavillonen) Gyldenløvesgade 24, 1369 København
+        </div>
+        <div class="col-sm-5 text-right">
+            <a href="http://google.dk" target="_blank" class="btn btn-map">Se kort</a>
+        </div>
+    </div>
+}

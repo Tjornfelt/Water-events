@@ -3,6 +3,41 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row event-page">
-    <h1>This is the events page</h1>
+<div class="row event-page main content-page">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Arrangementer</h1>
+            </div>
+        </div>
+        @RenderEvent()
+        @RenderEvent()
+        @RenderEvent()
+        @RenderEvent()
+
+        <ul>
+            <li>
+                <a href="/arrangementer/betingelser">Betingelser</a>
+                <a href="/arrangementer/spoergsmaal-og-svar">Spørgsmål og svar</a>
+                
+            </li>
+        </ul>
+    </div>
 </div>
+
+@helper RenderEvent()
+{
+    <div class="row event">
+        <div class="col-sm-4">
+            <img src="http://placehold.it/200x200" />
+        </div>
+        <div class="col-sm-8">
+            <h2>Waterballs</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a elementum felis. Ut feugiat pulvinar tortor eu gravida. Nunc faucibus, velit vel suscipit porttitor, ipsum magna interdum metus, at tristique lorem quam sit amet erat. Quisque facilisis lorem non metus dapibus varius tincidunt nec ligula. Quisque aliquet sapien lacus, eu tincidunt felis ultrices eget. Morbi at ultricies nibh. Nullam accumsan justo et convallis tristique. Pellentesque interdum commodo lacus in fermentum. Nam pellentesque, turpis at molestie commodo, velit tortor imperdiet diam, in luctus lacus enim id velit.</p>
+
+            <p>Morbi ac nibh ac erat dapibus luctus. Donec odio magna, pharetra ultricies condimentum eget, laoreet tincidunt dui. Donec nec dignissim justo. Maecenas libero lectus, finibus quis erat sed, viverra pharetra enim. Praesent tincidunt tellus orci, non facilisis lacus vestibulum non. Morbi eu volutpat velit. Sed et lacus eu magna pulvinar convallis sit amet in orci. Phasellus hendrerit, massa et rhoncus pulvinar, odio risus faucibus augue, quis porta erat libero nec ante. Aliquam nec augue dignissim, bibendum massa pretium, ornare ipsum. Nam scelerisque ornare sapien quis commodo. Sed fringilla commodo ex eu venenatis.</p>
+
+            <a class="btn btn-default" href="#">Book nu!</a>
+        </div>
+    </div>
+}

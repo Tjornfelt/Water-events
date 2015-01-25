@@ -111,3 +111,34 @@ body {
         }
     }
 }
+
+/*The carousel is outside the front-page wrapper, but is still considered part of the front page*/
+#carousel {
+    height: 470px;
+    .carousel-inner {
+        .item {
+            height: 470px;
+        }
+    }
+}
+
+/*Event page*/
+.event-page {
+    .event {
+        margin-bottom: 100px;
+    }
+}
+
+/*Locations page*/
+.locations-page {
+    .locations-wrapper {
+        margin-top: 50px;
+        .region {
+            margin-bottom: 50px;
+            .location {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}

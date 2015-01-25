@@ -7,6 +7,7 @@ using Umbraco.Web.Models;
 using Umbraco.Web;
 using Umbraco.Core.Models;
 using WaterEvents.Models;
+using WaterEvents.Classes.Cms;
 
 namespace WaterEvents.Controllers
 {
@@ -19,8 +20,8 @@ namespace WaterEvents.Controllers
         {
             TextPageModel model = new TextPageModel()
             {
-                Header = "Overskrift",
-                BodyText = new HtmlString("Brødtekst")
+                Header = CurrentPage.GetPropertyValue(DocTypes.Textpage.Header),
+                BodyText = CurrentPage.GetPropertyValue(DocTypes.Textpage.BodyText)
             };
 
             return View(model);

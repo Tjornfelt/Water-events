@@ -7,6 +7,9 @@ $gutter-size: 20px;
 html {
     font-size: 14px;
 }
+body {
+    font-family:Calibri;
+}
 
 img {
     //Images must never be bigger than their containing element
@@ -26,11 +29,12 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.8em;
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 h2 {
     font-size: 1.3em;
+    margin-bottom: 0.5em;
 }
 
 
@@ -49,9 +53,14 @@ p {
     padding-right: 10px;
 }
 
+.content-page {
+    margin-top: -230px;
+}
+
 .btn{
     padding: 0 20px;
     display: inline-block;
+    border-radius: 0;
     &.full {
         width: 100%;
     }
@@ -62,8 +71,17 @@ p {
         font-size: 1.5em;
         color: $white;
         border: none;
+        padding: 0 80px;
         &:hover {
             background: $red-hover;
+        }
+    }
+    &.btn-map {
+        background: $earth-green;
+        padding: 5px 50px;
+        color: $white;
+        &:hover {
+            background: $earth-green-hover;
         }
     }
 }

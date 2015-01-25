@@ -78,3 +78,4 @@ C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\
 C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\System.Net.Http.Formatting.xml
 C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\System.Web.Http.WebHost.dll
 C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\System.Web.Http.WebHost.xml
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\APE.Umbraco.dll

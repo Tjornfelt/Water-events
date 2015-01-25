@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Umbraco.Web.Mvc;
 using Umbraco.Web;
+using WaterEvents.Models;
+using WaterEvents.Classes.Cms;
 
 namespace WaterEvents.Controllers
 {
@@ -12,6 +14,11 @@ namespace WaterEvents.Controllers
     {
         protected override ViewResult View(string viewName, string masterName, object model)
         {
+
+            ViewBag.Global = new GlobalModel
+            {
+                CarouselActive = CurrentPage.IsDocumentType(DocTypes.FrontPage)
+            };
 
             //Move all "Global content" into the viewbag - it shouldnt be accessible in the model
 

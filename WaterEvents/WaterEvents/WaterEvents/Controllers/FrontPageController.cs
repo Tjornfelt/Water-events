@@ -7,6 +7,10 @@ using Umbraco.Web.Models;
 using Umbraco.Web;
 using Umbraco.Core.Models;
 using WaterEvents.Models;
+using WaterEvents.Classes.Cms;
+using WaterEvents.Models.HelperModels;
+using Umbraco.Core.Services;
+using WaterEvents.Classes.Mappers;
 
 namespace WaterEvents.Controllers
 {
@@ -17,12 +21,32 @@ namespace WaterEvents.Controllers
 
         public ActionResult FrontPage(RenderModel renderModel)
         {
-            TestModel model = new TestModel()
+            FrontPageModel model = new FrontPageModel()
             {
-                Test = "asd"
+                Header = CurrentPage.GetPropertyValue(DocTypes.FrontPage.Header),
+                BodyText = CurrentPage.GetPropertyValue(DocTypes.FrontPage.BodyText),
+                Slides = GetAndMapSlides()
             };
 
             return View(model);
+        }
+
+        private IEnumerable<Image> GetAndMapSlides()
+        {
+            var slideFolder = CurrentPage.GetPropertyValue(DocTypes.FrontPage.SlideshowFolder);
+
+            if(slideFolder != null)
+            {
+                var images = slideFolder.Children.Where(x => x.DocumentTypeAlias == "Image");
+
+                if (images != null && images.Any())
+                {
+                    foreach (var image in slideFolder.Children.Where(x => x.DocumentTypeAlias == "Image"))
+	                {
+                        yield return ImageMapper.Map<Image>(image);
+	                }
+                }
+            }
         }
     }
 }
