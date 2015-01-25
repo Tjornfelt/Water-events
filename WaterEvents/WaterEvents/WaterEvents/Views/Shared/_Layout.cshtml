@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <div style="position:fixed; bottom:0; height:20px; width: 100px;">
+    <div style="position:fixed; bottom:0; height:20px; width: 100px; z-index: 1000;">
         <div class="hidden-xs hidden-sm" style="background: green;">Desktop</div>
         <div class="hidden-xs hidden-md hidden-lg" style="background:yellow;">Tablet</div>
         <div class="hidden-sm hidden-md hidden-lg" style="background:blue;">Phone</div>
@@ -28,10 +28,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 main-menu-wrapper">
-                        <span class="logo"></span>
+                        <a href="/" class="logo"></a>
                         <ul class="main-menu">
                             <li><a href="/">Forside</a></li>
-                            <li><a href="/">Arrangementer</a></li>
+                            <li><a href="/arrangementer">Arrangementer</a></li>
                             <li><a href="/">Lokationer</a></li>
                             <li><a href="/">Priser</a></li>
                             <li><a href="/">Om os</a></li>
@@ -50,7 +50,7 @@
                 @RenderBody()
 
                 
-                <footer>
+                <footer class="row">
                     Copyright © 2015. Alle rettigheder forbeholdt.
                 </footer>
             </div>

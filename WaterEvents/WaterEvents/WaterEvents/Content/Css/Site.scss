@@ -14,7 +14,7 @@ body {
     z-index: 100;
     .main-menu-wrapper {
         position: relative;
-        span.logo {
+        a.logo {
             background: url(/Content//Images/logo.png);
             height: 82px;
             width: 332px;
@@ -59,7 +59,6 @@ body {
     //Site offset is the .main-menu-wrapper height + margin-top
     top: -170px;
     footer {
-        margin-top: $gutter-size;
         background: $blue-light;
         height: 80px;
         line-height: 80px;
@@ -72,14 +71,43 @@ body {
 .front-page {
     margin-top: $gutter-size;
     .content {
-        background: $white;
-        min-height: 450px;
     }
+
+    .video {
+        background: $grayish-blue;
+        iframe {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+    }
+    .facebook {
+        margin-top: $gutter-size;
+        background: $grayish-blue;
+        padding: 35px;
+        p {
+            font-size: 1.3em;
+            color: $white;
+            span {
+                font-size: 1.5em;
+            }
+        }
+        .facebook-logo {
+            background: url(/Content/Images/facebook-logo.png) no-repeat;
+            padding-left: 150px;
+            height: 104px;
+            font-size: 3.5em;
+            color: $white;
+
+        }
+    }
+
     .call-to-action {
         padding: 15px;
         h2 {
             color: $yellow;
-            margin-bottom: 311px;
+            margin-bottom: 470px;
         }
     }
 }

@@ -27,6 +27,14 @@ p {
   font-size: 1em;
   margin-bottom: 1.75em; }
 
+.main {
+  background: #ffffff;
+  padding-bottom: 20px; }
+
+.row.main {
+  padding-left: 10px;
+  padding-right: 10px; }
+
 .btn {
   padding: 0 20px;
   display: inline-block; }

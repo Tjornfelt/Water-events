@@ -27,6 +27,14 @@ p {
   font-size: 1em;
   margin-bottom: 1.75em; }
 
+.main {
+  background: #ffffff;
+  padding-bottom: 20px; }
+
+.row.main {
+  padding-left: 10px;
+  padding-right: 10px; }
+
 .btn {
   padding: 0 20px;
   display: inline-block; }
@@ -57,7 +65,7 @@ body {
   z-index: 100; }
   .main-menu-bar .main-menu-wrapper {
     position: relative; }
-    .main-menu-bar .main-menu-wrapper span.logo {
+    .main-menu-bar .main-menu-wrapper a.logo {
       background: url(/Content//Images/logo.png);
       height: 82px;
       width: 332px;
@@ -91,7 +99,6 @@ body {
   position: relative;
   top: -170px; }
   .site-offset footer {
-    margin-top: 20px;
     background: #77c1ff;
     height: 80px;
     line-height: 80px;
@@ -101,13 +108,31 @@ body {
 /*Front page*/
 .front-page {
   margin-top: 20px; }
-  .front-page .content {
-    background: #ffffff;
-    min-height: 450px; }
+  .front-page .video {
+    background: #658ca3; }
+    .front-page .video iframe {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0; }
+  .front-page .facebook {
+    margin-top: 20px;
+    background: #658ca3;
+    padding: 35px; }
+    .front-page .facebook p {
+      font-size: 1.3em;
+      color: #ffffff; }
+      .front-page .facebook p span {
+        font-size: 1.5em; }
+    .front-page .facebook .facebook-logo {
+      background: url(/Content/Images/facebook-logo.png) no-repeat;
+      padding-left: 150px;
+      height: 104px;
+      font-size: 3.5em;
+      color: #ffffff; }
   .front-page .call-to-action {
     padding: 15px; }
     .front-page .call-to-action h2 {
       color: #ffea21;
-      margin-bottom: 311px; }
+      margin-bottom: 470px; }
 
 /*# sourceMappingURL=Site.css.map */

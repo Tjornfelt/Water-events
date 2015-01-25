@@ -39,6 +39,16 @@ p {
     margin-bottom: 1.75em;
 }
 
+.main {
+    background: $white;
+    padding-bottom: $gutter-size;
+}
+
+.row.main {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .btn{
     padding: 0 20px;
     display: inline-block;
