@@ -1,0 +1,63 @@
+﻿@import "DesignScheme";
+
+/* Contains global reusable elements as well as bootstrap overrides */
+
+$gutter-size: 20px;
+
+html {
+    font-size: 14px;
+}
+
+img {
+    //Images must never be bigger than their containing element
+    max-width: 100%;
+}
+
+.row-no-margin {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin:0;
+    padding:0;
+    color: #3193d2;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+h2 {
+    font-size: 1.3em;
+}
+
+
+p {
+    font-size: 1em;
+    margin-bottom: 1.75em;
+}
+
+.btn{
+    padding: 0 20px;
+    display: inline-block;
+    &.full {
+        width: 100%;
+    }
+    &.btn-default {
+        height: 90px;
+        line-height: 90px;
+        background: $red;
+        font-size: 1.5em;
+        color: $white;
+        border: none;
+        &:hover {
+            background: $red-hover;
+        }
+    }
+}
+
+.content {
+    padding: 15px;
+}

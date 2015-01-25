@@ -1,0 +1,85 @@
+﻿@import "GlobalElements";
+@import "DesignScheme";
+
+
+
+/*Layout*/
+body {
+    background: $site-background;
+}
+.main-menu-bar {
+    position: relative;
+    height: 100px;
+    margin-top: 70px;
+    z-index: 100;
+    .main-menu-wrapper {
+        position: relative;
+        span.logo {
+            background: url(/Content//Images/logo.png);
+            height: 82px;
+            width: 332px;
+            position: absolute;
+            top:-60px;
+            left: -47px;
+        }
+
+        ul.main-menu {
+            height: 70px;
+            background-color: $blue-default;
+            list-style: none;
+            margin:0;
+            padding:0;
+            li {
+                width: 150px;
+                line-height: 70px;
+                float: left;
+                text-align: center;
+                &:last-child a {
+                        border-right: none;
+                    }
+                a {
+                    display: block;
+                    height: 70px;
+                    color: $white;
+                    border-right: 1px solid $blue-light;
+                
+                    &:hover {
+                        text-decoration: none;
+                        border-bottom: 10px solid $yellow;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* The content is located inside the site offset - This is necessary because the background is not just a background on the frontpage, but a slideshow :-( */
+.site-offset {
+    position: relative;
+    //Site offset is the .main-menu-wrapper height + margin-top
+    top: -170px;
+    footer {
+        margin-top: $gutter-size;
+        background: $blue-light;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        color: $white;
+    }
+}
+
+/*Front page*/
+.front-page {
+    margin-top: $gutter-size;
+    .content {
+        background: $white;
+        min-height: 450px;
+    }
+    .call-to-action {
+        padding: 15px;
+        h2 {
+            color: $yellow;
+            margin-bottom: 311px;
+        }
+    }
+}

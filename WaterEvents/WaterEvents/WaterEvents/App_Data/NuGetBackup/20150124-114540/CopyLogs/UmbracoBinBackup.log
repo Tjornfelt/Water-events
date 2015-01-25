@@ -1,0 +1,39 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 24. januar 2015 11:45:40
+   Source : C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\
+     Dest : C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\App_Data\NuGetBackup\20150124-114540\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   9	C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\
+	    New File  		   45416	Microsoft.Web.Infrastructure.dll  0%  100%  
+	    New File  		   23640	Microsoft.Web.Mvc.FixedDisplayModes.dll  0%  100%  
+	    New File  		  391680	Newtonsoft.Json.dll  0%   33%   66%  100%  
+	    New File  		  138432	System.Web.Helpers.dll  0%   94%  100%  
+	    New File  		  507048	System.Web.Mvc.dll  0%   25%   51%   77%  100%  
+	    New File  		  266944	System.Web.Razor.dll  0%   49%   98%  100%  
+	    New File  		   41152	System.Web.WebPages.Deployment.dll  0%  100%  
+	    New File  		  204480	System.Web.WebPages.dll  0%   64%  100%  
+	    New File  		   39616	System.Web.WebPages.Razor.dll  0%  100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         0         0         0         0
+   Files :         9         9         0         0         0         0
+   Bytes :    1.58 m    1.58 m         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :            42523282 Bytes/sec.
+   Speed :            2433.201 MegaBytes/min.
+   Ended : 24. januar 2015 11:45:40
+

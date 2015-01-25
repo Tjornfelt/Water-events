@@ -1,0 +1,63 @@
+﻿@using WaterEvents.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Css/Site.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+    <div style="position:fixed; bottom:0; height:20px; width: 100px;">
+        <div class="hidden-xs hidden-sm" style="background: green;">Desktop</div>
+        <div class="hidden-xs hidden-md hidden-lg" style="background:yellow;">Tablet</div>
+        <div class="hidden-sm hidden-md hidden-lg" style="background:blue;">Phone</div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row main-menu-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 main-menu-wrapper">
+                        <span class="logo"></span>
+                        <ul class="main-menu">
+                            <li><a href="/">Forside</a></li>
+                            <li><a href="/">Arrangementer</a></li>
+                            <li><a href="/">Lokationer</a></li>
+                            <li><a href="/">Priser</a></li>
+                            <li><a href="/">Om os</a></li>
+                            <li><a href="/">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row site-offset">
+            <div style="background-image: url('http://placehold.it/1920x470'); background-size: cover; background-position: top center; height: 470px;">
+            </div>
+            <div class="container">
+
+                @RenderBody()
+
+                
+                <footer>
+                    Copyright © 2015. Alle rettigheder forbeholdt.
+                </footer>
+            </div>
+        </div>
+
+        
+
+    </div>
+</body>
+</html>
