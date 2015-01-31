@@ -24,6 +24,8 @@ body {
         }
 
         ul.main-menu {
+            $active-bar-height: 10px;
+
             height: 70px;
             background-color: $blue-default;
             list-style: none;
@@ -34,19 +36,23 @@ body {
                 line-height: 70px;
                 float: left;
                 text-align: center;
-                &:last-child a {
+                border-right: 1px solid $blue-light;
+                &:last-child {
                         border-right: none;
                     }
                 a {
                     display: block;
                     height: 70px;
                     color: $white;
-                    border-right: 1px solid $blue-light;
+                    
                 
                     &:hover {
                         text-decoration: none;
-                        border-bottom: 10px solid $yellow;
+                        border-bottom: $active-bar-height solid $yellow;
                     }
+                }
+                &.active a {
+                    border-bottom: $active-bar-height solid $yellow;
                 }
             }
         }
@@ -83,23 +89,28 @@ body {
 
     }
     .facebook {
-        margin-top: $gutter-size;
-        background: $grayish-blue;
-        padding: 35px;
-        p {
-            font-size: 1.3em;
-            color: $white;
-            span {
-                font-size: 1.5em;
-            }
+        &:hover {
+            text-decoration: none;
         }
-        .facebook-logo {
-            background: url(/Content/Images/facebook-logo.png) no-repeat;
-            padding-left: 150px;
-            height: 104px;
-            font-size: 3.5em;
-            color: $white;
+        > div {
+            margin-top: $gutter-size;
+            background: $grayish-blue;
+            padding: 35px;
+            p {
+                font-size: 1.3em;
+                color: $white;
+                span {
+                    font-size: 1.5em;
+                }
+            }
+            .facebook-logo {
+                background: url(/Content/Images/facebook-logo.png) no-repeat;
+                padding-left: 150px;
+                height: 104px;
+                font-size: 3.5em;
+                color: $white;
 
+            }
         }
     }
 
@@ -139,6 +150,33 @@ body {
                 margin-bottom: 20px;
             }
         }
+    }
+
+}
+
+/*Contact page*/
+.contact-page {
+    form {
+        label {
+            display: block;
+        }
+        input[type="text"], textarea {
+            width: 350px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        #thanks {
+            display: none;
+        }
+        .field-validation-error {
+            display: block;
+            color: red;
+        }
+
     }
 
 }

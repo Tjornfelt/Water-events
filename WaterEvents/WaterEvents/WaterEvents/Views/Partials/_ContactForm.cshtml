@@ -1,0 +1,95 @@
+﻿@model WaterEvents.Models.HelperModels.ContactFormModel
+
+<div class="row">
+    @using (Ajax.BeginForm("ContactFormSubmit", "FormsSurface", new {ID = Model.ID}, new AjaxOptions { HttpMethod = "POST", OnComplete = "$('#thanks').show()" }, null))
+    {
+        <div class="col-sm-10 col-sm-push-1">
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Name)
+                    @Html.ValidationMessageFor(m => m.Name)
+                    @Html.TextBoxFor(m => m.Name)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Phone)
+                    @Html.TextBoxFor(m => m.Phone)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Address)
+                    @Html.TextBoxFor(m => m.Address)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.PostalCity)
+                    @Html.TextBoxFor(m => m.PostalCity)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <span>Arrangement type</span>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            @Html.LabelFor(m => m.Waterballs)
+                            @Html.CheckBoxFor(m => m.Waterballs)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            @Html.LabelFor(m => m.Landballs)
+                            @Html.CheckBoxFor(m => m.Landballs)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Participants)
+                    @Html.TextBoxFor(m => m.Participants)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Location)
+                    @Html.TextBoxFor(m => m.Location)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.DateDay)
+                    @Html.TextBoxFor(m => m.DateDay)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.DateHour)
+                    @Html.TextBoxFor(m => m.DateHour)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.LabelFor(m => m.Message)
+                    @Html.ValidationMessageFor(m => m.Message)
+                    @Html.TextAreaFor(m => m.Message)
+                </div>
+            </div>
+
+            <input type="submit" value="Send" />
+        </div>
+        <div id="thanks">
+            Tak for henvendelsen! Blablabla blabla bla.
+        </div>
+
+    }
+</div>

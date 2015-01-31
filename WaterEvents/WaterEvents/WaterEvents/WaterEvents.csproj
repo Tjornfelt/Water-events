@@ -41,7 +41,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="APE.Umbraco">
+    <Reference Include="APE.Umbraco, Version=2.1.5408.30360, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\APE.Umbraco.2.1.0\lib\net45\APE.Umbraco.dll</HintPath>
     </Reference>
     <Reference Include="AutoMapper">
@@ -111,7 +112,13 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Postmark">
+      <HintPath>..\packages\Postmark.2.0.59\lib\net45\Postmark.dll</HintPath>
+    </Reference>
+    <Reference Include="Postmark.Convenience">
+      <HintPath>..\packages\Postmark.2.0.59\lib\net45\Postmark.Convenience.dll</HintPath>
     </Reference>
     <Reference Include="SQLCE4Umbraco">
       <HintPath>..\packages\UmbracoCms.Core.7.2.1\lib\SQLCE4Umbraco.dll</HintPath>
@@ -218,6 +225,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Cms\Contactpage.cs">
+      <DependentUpon>Umbraco.DocTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Cms\Event.cs">
       <DependentUpon>Umbraco.DocTypes.tt</DependentUpon>
     </Compile>
@@ -262,6 +272,8 @@
     <Compile Include="Classes\Mappers\NavigationItemMapper.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
+    <Compile Include="Controllers\ContactPageController.cs" />
+    <Compile Include="Controllers\SurfaceControllers\FormsSurfaceController.cs" />
     <Compile Include="Controllers\TextPageController.cs" />
     <Compile Include="Controllers\FrontPageController.cs" />
     <Compile Include="Controllers\MasterController.cs" />
@@ -269,11 +281,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EventModel.cs" />
+    <Compile Include="Models\HelperModels\ContactFormModel.cs" />
+    <Compile Include="Models\HelperModels\EventModel.cs" />
     <Compile Include="Models\HelperModels\Image.cs" />
+    <Compile Include="Models\HelperModels\LocationRegion.cs" />
+    <Compile Include="Models\HelperModels\Location.cs" />
     <Compile Include="Models\HelperModels\NavigationItem.cs" />
     <Compile Include="Models\HelperModels\NewsItem.cs" />
     <Compile Include="Models\LocationsModel.cs" />
     <Compile Include="Models\FrontPageModel.cs" />
+    <Compile Include="Models\ContactPageModel.cs" />
     <Compile Include="Models\TextPageModel.cs" />
     <Compile Include="Models\GlobalModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -298,6 +315,12 @@
     </Content>
     <Content Include="Content\Css\GlobalElements.min.css">
       <DependentUpon>GlobalElements.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Css\offcanvas.css">
+      <DependentUpon>offcanvas.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Css\offcanvas.min.css">
+      <DependentUpon>offcanvas.css</DependentUpon>
     </Content>
     <Content Include="Content\Css\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
@@ -343,10 +366,22 @@
       <LastGenOutput>Umbraco.Dictionary.cs</LastGenOutput>
     </Content>
     <Content Include="Classes\APE\FileManager.ttinclude" />
+    <Content Include="Content\Css\offcanvas.scss" />
+    <Content Include="Content\Css\offcanvas.css.map">
+      <DependentUpon>offcanvas.css</DependentUpon>
+    </Content>
     <None Include="scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="scripts\jquery-2.1.3.js" />
     <Content Include="scripts\jquery-2.1.3.min.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\npm.js" />
+    <Content Include="scripts\offcanvas.js" />
     <Content Include="usercontrols\dummy.txt" />
     <Content Include="Views\Partials\dummy.txt" />
     <Content Include="Web.config" />
@@ -361,6 +396,10 @@
     <Content Include="Views\Events.cshtml" />
     <Content Include="Views\Locations.cshtml" />
     <Content Include="scripts\jquery-2.1.3.min.map" />
+    <Content Include="Views\ContactPage.cshtml" />
+    <Content Include="Views\Partials\_ContactForm.cshtml" />
+    <Content Include="Views\Partials\_MainMenu.cshtml" />
+    <Content Include="Views\Partials\_SubMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

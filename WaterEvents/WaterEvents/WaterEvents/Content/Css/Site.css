@@ -105,17 +105,19 @@ body {
         width: 150px;
         line-height: 70px;
         float: left;
-        text-align: center; }
-        .main-menu-bar .main-menu-wrapper ul.main-menu li:last-child a {
+        text-align: center;
+        border-right: 1px solid #77c1ff; }
+        .main-menu-bar .main-menu-wrapper ul.main-menu li:last-child {
           border-right: none; }
         .main-menu-bar .main-menu-wrapper ul.main-menu li a {
           display: block;
           height: 70px;
-          color: #ffffff;
-          border-right: 1px solid #77c1ff; }
+          color: #ffffff; }
           .main-menu-bar .main-menu-wrapper ul.main-menu li a:hover {
             text-decoration: none;
             border-bottom: 10px solid #ffea21; }
+        .main-menu-bar .main-menu-wrapper ul.main-menu li.active a {
+          border-bottom: 10px solid #ffea21; }
 
 /* The content is located inside the site offset - This is necessary because the background is not just a background on the frontpage, but a slideshow :-( */
 .site-offset {
@@ -137,16 +139,18 @@ body {
       display: block;
       margin: 0 auto;
       padding: 10px 0; }
-  .front-page .facebook {
+  .front-page .facebook:hover {
+    text-decoration: none; }
+  .front-page .facebook > div {
     margin-top: 20px;
     background: #658ca3;
     padding: 35px; }
-    .front-page .facebook p {
+    .front-page .facebook > div p {
       font-size: 1.3em;
       color: #ffffff; }
-      .front-page .facebook p span {
+      .front-page .facebook > div p span {
         font-size: 1.5em; }
-    .front-page .facebook .facebook-logo {
+    .front-page .facebook > div .facebook-logo {
       background: url(/Content/Images/facebook-logo.png) no-repeat;
       padding-left: 150px;
       height: 104px;
@@ -175,5 +179,19 @@ body {
     margin-bottom: 50px; }
     .locations-page .locations-wrapper .region .location {
       margin-bottom: 20px; }
+
+/*Contact page*/
+.contact-page form label {
+  display: block; }
+.contact-page form input[type="text"], .contact-page form textarea {
+  width: 350px;
+  margin-bottom: 15px; }
+.contact-page form textarea {
+  height: 200px; }
+.contact-page form #thanks {
+  display: none; }
+.contact-page form .field-validation-error {
+  display: block;
+  color: red; }
 
 /*# sourceMappingURL=Site.css.map */

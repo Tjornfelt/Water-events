@@ -58,11 +58,17 @@ namespace WaterEvents.Classes.Cms
         {
             get { return _Location ?? (_Location = new Location()); }
         }
+        private static Contactpage _Contactpage;
+        public static Contactpage Contactpage
+        {
+            get { return _Contactpage ?? (_Contactpage = new Contactpage()); }
+        }
     }
 }
 
 // Generated helper templates
 // Generated items
+// WaterEvents\WaterEvents\WaterEvents\Classes\Cms\Contactpage.cs
 // WaterEvents\WaterEvents\WaterEvents\Classes\Cms\Location.cs
 // WaterEvents\WaterEvents\WaterEvents\Classes\Cms\LocationsRegion.cs
 // WaterEvents\WaterEvents\WaterEvents\Classes\Cms\Locations.cs
