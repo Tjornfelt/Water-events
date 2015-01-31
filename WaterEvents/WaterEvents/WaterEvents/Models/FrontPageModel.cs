@@ -11,5 +11,6 @@ namespace WaterEvents.Models
         public string Header { get; set; }
         public IHtmlString BodyText { get; set; }
         public IEnumerable<Image> Slides { get; set; }
+        public string FacebookURL { get; set; }
     }
 }

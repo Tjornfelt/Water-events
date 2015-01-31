@@ -9,12 +9,17 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/Css/Site.css" rel="stylesheet" />
 
-    <link href="~/Content/Css/offcanvas.css" rel="stylesheet" />
+    <link href="~/Content/Css/offcanvas.css?v=0.9" rel="stylesheet" />
 
 </head>
 <body>
@@ -25,21 +30,38 @@
         <div class="hidden-sm hidden-md hidden-lg" style="background:blue;">Phone</div>
     </div>
 
+    <div class="container-fluid mobile-top-bar hidden-md hidden-lg">
+        <div class="row">
+            <div class="col-xs-12">
+                @*
+                <a href="/" class="logo"></a>
+                *@
+                <button data-toggle="offcanvas">Menu</button>
+                @*
+                <div class="plate" data-toggle="offcanvas">
+                    <div class="burger">
+                        <span class="beef"></span>
+                    </div>
+                </div>
+                *@
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
-        <div class="row main-menu-bar">
+        <div class="row main-menu-bar hidden-sm hidden-xs">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 main-menu-wrapper">
                         <a href="/" class="logo"></a>
                         @Html.Partial("_MainMenu", global.MainMenu)
-                        
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row site-offset row-offcanvas row-offcanvas-right active">
-
+        <div class="row site-offset row-offcanvas row-offcanvas-right">
+            <div class="overlay" data-toggle="offcanvas"></div>
             @if (global.CarouselActive)
             {
                 @RenderSection("MenuBackground", false)
@@ -55,7 +77,16 @@
                     Copyright © 2015. Alle rettigheder forbeholdt.
                 </footer>
             </div>
-        </div>
+
+            <div class="sidebar-offcanvas hidden-md hidden-lg" id="sidebar">
+                <ul>
+                    <li><a href="/" title="Forside">Forside</a></li>
+                    @foreach (var item in global.MainMenu)
+                    {
+                        <li @Html.Raw(item.Active ? "class=\"active\"" : string.Empty)><a title="@item.Name" href="@item.Url">@item.Name</a></li>
+                    }
+                </ul>
+            </div>
     </div>
 
     <script src="~/scripts/jquery-2.1.3.min.js"></script>

@@ -322,6 +322,12 @@
     <Content Include="Content\Css\offcanvas.min.css">
       <DependentUpon>offcanvas.css</DependentUpon>
     </Content>
+    <Content Include="Content\Css\ResponsiveMixin.css">
+      <DependentUpon>ResponsiveMixin.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Css\ResponsiveMixin.min.css">
+      <DependentUpon>ResponsiveMixin.css</DependentUpon>
+    </Content>
     <Content Include="Content\Css\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -369,6 +375,10 @@
     <Content Include="Content\Css\offcanvas.scss" />
     <Content Include="Content\Css\offcanvas.css.map">
       <DependentUpon>offcanvas.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Css\ResponsiveMixin.scss" />
+    <Content Include="Content\Css\ResponsiveMixin.css.map">
+      <DependentUpon>ResponsiveMixin.css</DependentUpon>
     </Content>
     <None Include="scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="scripts\jquery-2.1.3.js" />

@@ -10,9 +10,13 @@
             @Model.BodyText
         </div>
         <div class="locations-wrapper">
-            @RenderLocationRegion()
-            @RenderLocationRegion()
-            @RenderLocationRegion()
+            @if(Model.LocationRegions != null && Model.LocationRegions.Any())
+            {
+                foreach (var region in Model.LocationRegions)
+                {
+                    @RenderLocationRegion(region)
+                }
+            }
         </div>
         <div class="row">
             @Model.PostBodyText
@@ -20,32 +24,39 @@
     </div>
 </div>
 
-@helper RenderLocationRegion()
+@helper RenderLocationRegion(WaterEvents.Models.HelperModels.LocationRegion region)
 {
     <div class="row region">
         <div class="col-sm-10 col-sm-push-1">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2>Sjælland</h2>
+                    <h2>@region.Name</h2>
                 </div>
             </div>
-            @RenderLocation()
-            @RenderLocation()
-            @RenderLocation()
-            @RenderLocation()
+
+            @if(region.Locations != null && region.Locations.Any())
+            {
+                foreach (var location in region.Locations)
+                {
+                    @RenderLocation(location)
+                }
+            }
 
         </div>
     </div>    
 }
 
-@helper RenderLocation()
+@helper RenderLocation(WaterEvents.Models.HelperModels.Location location)
 {
     <div class="row location">
         <div class="col-sm-7">
-            Søernes Sejlklub (ved Søpavillonen) Gyldenløvesgade 24, 1369 København
+            @location.Address
         </div>
         <div class="col-sm-5 text-right">
-            <a href="http://google.dk" target="_blank" class="btn btn-map">Se kort</a>
+            @if(string.IsNullOrWhiteSpace(location.ExternalUrl))
+            {
+                <a href="@location.ExternalUrl" target="_blank" class="btn btn-map">Se kort</a>
+            }
         </div>
     </div>
 }

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<WaterEvents.Models.HelperModels.NavigationItem>
+
+@{
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@item.Url" title="@item.Name">@item.Name</a>
+            </li>
+        }
+        
+    </ul>
+}

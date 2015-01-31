@@ -16,6 +16,9 @@ namespace WaterEvents.Classes.Cms
 
 		public Event(): base()		
 		{
+			this.Header = new StringProperty(){ Alias = "header" };
+			this.BodyText = new HtmlStringProperty(){ Alias = "bodyText" };
+			this.Image = new MediaProperty(){ Alias = "image" };
 				
 		}
 
@@ -26,6 +29,22 @@ namespace WaterEvents.Classes.Cms
 		{
 			return "Event";
 		}
-	 
+	 		
+				
+		/// <summary>
+		///		<para>Datatype: Textstring</para>
+		/// </summary>
+		public StringProperty Header { get; private set; }		
+				
+		/// <summary>
+		///		<para>Datatype: Richtext editor</para>
+		/// </summary>
+		public HtmlStringProperty BodyText { get; private set; }		
+				
+		/// <summary>
+		///		<para>Datatype: Media Picker</para>
+		///		<para>Description: Vælg et billede. Billedet skal være 200x200 for bedste resultat.</para>
+		/// </summary>
+		public MediaProperty Image { get; private set; }
 	}
 }

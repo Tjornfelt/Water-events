@@ -5,6 +5,7 @@ using System.Web;
 using WaterEvents.Models.HelperModels;
 using Umbraco.Web;
 using Umbraco.Core.Models;
+using WaterEvents.Classes.Cms;
 
 namespace WaterEvents.Classes.Mappers
 {
@@ -21,7 +22,9 @@ namespace WaterEvents.Classes.Mappers
             List<T> navigationItems = new List<T>();
             if (root != null)
             {
-                foreach (var child in root.Children)
+                foreach (var child in root.Children.Where(x => 
+                    x.DocumentTypeAlias != DocTypes.Event)
+                    )
                 {
                     NavigationItem navItem = new NavigationItem() {
                         Name = child.Name,

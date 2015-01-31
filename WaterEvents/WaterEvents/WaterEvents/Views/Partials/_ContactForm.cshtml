@@ -1,9 +1,9 @@
 ﻿@model WaterEvents.Models.HelperModels.ContactFormModel
 
 <div class="row">
-    @using (Ajax.BeginForm("ContactFormSubmit", "FormsSurface", new {ID = Model.ID}, new AjaxOptions { HttpMethod = "POST", OnComplete = "$('#thanks').show()" }, null))
+    @using (Ajax.BeginForm("ContactFormSubmit", "FormsSurface", new {ID = Model.ID}, new AjaxOptions { HttpMethod = "POST", OnComplete = "$('#thanks').show(); $('#contact-form').hide();" }, null))
     {
-        <div class="col-sm-10 col-sm-push-1">
+        <div id="contact-form" class="col-sm-10 col-sm-push-1">
             <div class="row">
                 <div class="col-sm-12">
                     @Html.LabelFor(m => m.Name)
@@ -87,7 +87,7 @@
 
             <input type="submit" value="Send" />
         </div>
-        <div id="thanks">
+        <div id="thanks" class="col-sm-10 col-sm-push-1">
             Tak for henvendelsen! Blablabla blabla bla.
         </div>
 

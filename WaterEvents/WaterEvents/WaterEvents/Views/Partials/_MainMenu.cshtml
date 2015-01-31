@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WaterEvents.Models.HelperModels.NavigationItem>
+
+@{
+
+    <ul class="main-menu">
+        <li><a href="/" title="Forside">Forside</a></li>
+        @foreach (var item in Model)
+        {
+            <li @Html.Raw(item.Active? "class=\"active\"":string.Empty)><a title="@item.Name" href="@item.Url">@item.Name</a></li>
+        }
+    </ul>
+    
+    @*
+    <nav>
+        <ul class="main-menu">
+            <li>
+                <a href="/" title="Tilbage til forsiden">Forside</a>
+            </li>
+            @foreach (var item in Model)
+            {
+                <li @Html.Raw(item.Active ? "class=\"active\"" : string.Empty)>
+                    <a href="@item.Url" title="@item.Name">@item.Name</a>
+                </li>
+            }
+        </ul>
+    </nav>
+    *@
+}

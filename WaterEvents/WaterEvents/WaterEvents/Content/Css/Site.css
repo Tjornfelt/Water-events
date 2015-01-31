@@ -72,6 +72,21 @@ p {
 .content {
   padding: 15px; }
 
+.plate {
+  padding: 20px;
+  cursor: pointer; }
+  .plate .burger {
+    display: inline-block;
+    width: 50px;
+    padding: 5px 0;
+    background: #3193d2; }
+    .plate .burger span.beef {
+      display: block;
+      height: 20px;
+      background: #3193d2;
+      border-top: 7px solid #77c1ff;
+      border-bottom: 7px solid #77c1ff; }
+
 /*Fonts and colors ONLY*/
 /*Blues*/
 /*Reds*/
@@ -80,6 +95,45 @@ p {
 /*Layout*/
 body {
   background: #ebeef3; }
+
+.mobile-top-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  z-index: 50000; }
+  .mobile-top-bar .logo {
+    margin-top: 10px;
+    background: url(/Content//Images/logo.png) no-repeat;
+    display: inline-block;
+    background-size: 100%;
+    width: 250px;
+    height: 70px; }
+
+.sidebar-offcanvas {
+  padding-top: 50px; }
+  .sidebar-offcanvas ul {
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+    .sidebar-offcanvas ul li {
+      display: block;
+      border-bottom: 2px solid #77c1ff;
+      font-size: 1.25em; }
+      .sidebar-offcanvas ul li a {
+        display: block;
+        line-height: 50px;
+        height: 50px;
+        padding-left: 10px; }
+        .sidebar-offcanvas ul li a:hover {
+          border-left: 5px solid #ffea21;
+          padding-left: 5px; }
+      .sidebar-offcanvas ul li.active a {
+        border-left: 5px solid #ffea21;
+        padding-left: 5px; }
 
 .main-menu-bar {
   position: relative;
@@ -123,6 +177,9 @@ body {
 .site-offset {
   position: relative;
   top: -170px; }
+  @media screen and (max-width: 991px) {
+    .site-offset {
+      top: 0; } }
   .site-offset footer {
     background: #77c1ff;
     height: 80px;
@@ -133,12 +190,15 @@ body {
 /*Front page*/
 .front-page {
   margin-top: 20px; }
+  @media screen and (max-width: 767px) {
+    .front-page {
+      margin-top: -230px; } }
   .front-page .video {
     background: #658ca3; }
     .front-page .video iframe {
       display: block;
       margin: 0 auto;
-      padding: 10px 0; }
+      padding: 10px; }
   .front-page .facebook:hover {
     text-decoration: none; }
   .front-page .facebook > div {

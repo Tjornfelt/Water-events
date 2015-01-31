@@ -16,6 +16,8 @@ namespace WaterEvents.Classes.Cms
 
 		public Events(): base()		
 		{
+			this.Header = new StringProperty(){ Alias = "header" };
+			this.BodyText = new HtmlStringProperty(){ Alias = "bodyText" };
 				
 		}
 
@@ -26,6 +28,16 @@ namespace WaterEvents.Classes.Cms
 		{
 			return "Events";
 		}
-	 
+	 		
+				
+		/// <summary>
+		///		<para>Datatype: Textstring</para>
+		/// </summary>
+		public StringProperty Header { get; private set; }		
+				
+		/// <summary>
+		///		<para>Datatype: Richtext editor</para>
+		/// </summary>
+		public HtmlStringProperty BodyText { get; private set; }
 	}
 }

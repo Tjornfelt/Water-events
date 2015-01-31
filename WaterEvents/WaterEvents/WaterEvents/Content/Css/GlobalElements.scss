@@ -3,7 +3,7 @@
 /* Contains global reusable elements as well as bootstrap overrides */
 
 $gutter-size: 20px;
-
+$content-page-top-margin: -230px;
 html {
     font-size: 14px;
 }
@@ -54,7 +54,7 @@ p {
 }
 
 .content-page {
-    margin-top: -230px;
+    margin-top: $content-page-top-margin;
 }
 
 .btn{
@@ -88,4 +88,22 @@ p {
 
 .content {
     padding: 15px;
+}
+.plate {
+    padding: 20px;
+    cursor: pointer;
+    .burger {
+        display: inline-block;
+        width: 50px;
+        padding: 5px 0;
+        background: $blue-default;
+        span.beef {
+            display: block;
+            height: 20px;
+            background: $blue-default;
+            border-top: 7px solid $blue-light;
+            border-bottom: 7px solid $blue-light;
+        
+        }
+    }
 }

@@ -25,7 +25,8 @@ namespace WaterEvents.Controllers
             {
                 Header = CurrentPage.GetPropertyValue(DocTypes.FrontPage.Header),
                 BodyText = CurrentPage.GetPropertyValue(DocTypes.FrontPage.BodyText),
-                Slides = GetAndMapSlides()
+                Slides = GetAndMapSlides(),
+                FacebookURL = CurrentPage.GetPropertyValue(DocTypes.FrontPage.FacebookLink)
             };
 
             return View(model);

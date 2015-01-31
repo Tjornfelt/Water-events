@@ -18,20 +18,19 @@ namespace WaterEvents.Controllers.SurfaceControllers
     {
         public JsonResult ContactFormSubmit(ContactFormModel form, string ID)
         {
-            //UmbracoHelper UH = new UmbracoHelper();
-
-            //IPublishedContent currentNode = UH.TypedContent(ID);
             var currentNode = Umbraco.TypedContent(ID);
             string template = currentNode.GetPropertyValue(DocTypes.Contactpage.EmailTemplate).ToHtmlString();
 
 
-            string from = currentNode.GetPropertyValue(DocTypes.Contactpage.From);
+            string from = currentNode.GetPropertyValue(DocTypes.Contactpage.From); //from is also the form administrator
             string to = form.Email;
-            MailMessage mail = new MailMessage(from, to);
+            MailMessage mailUser = new MailMessage(from, to);
+            MailMessage mailAdmin = new MailMessage(from, from);
 
-            mail.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);
-            mail.IsBodyHtml = true;
-
+            mailUser.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);
+            mailAdmin.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);
+            mailUser.IsBodyHtml = true;
+            mailAdmin.IsBodyHtml = true;
             
 
             var replacedTemplate = template.Replace("##name##", form.Name);
@@ -47,11 +46,13 @@ namespace WaterEvents.Controllers.SurfaceControllers
             replacedTemplate = replacedTemplate.Replace("##datehour##", form.DateHour);
             replacedTemplate = replacedTemplate.Replace("##message##", form.Message);
 
-            mail.Body = replacedTemplate;
+            mailUser.Body = replacedTemplate;
+            mailAdmin.Body = replacedTemplate;
 
             SmtpClient client = new SmtpClient();
 
-            client.Send(mail);
+            client.Send(mailUser);
+            client.Send(mailAdmin);
             return Json(null);
         }
     }

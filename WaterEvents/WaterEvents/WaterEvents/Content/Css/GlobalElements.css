@@ -72,4 +72,19 @@ p {
 .content {
   padding: 15px; }
 
+.plate {
+  padding: 20px;
+  cursor: pointer; }
+  .plate .burger {
+    display: inline-block;
+    width: 50px;
+    padding: 5px 0;
+    background: #3193d2; }
+    .plate .burger span.beef {
+      display: block;
+      height: 20px;
+      background: #3193d2;
+      border-top: 7px solid #77c1ff;
+      border-bottom: 7px solid #77c1ff; }
+
 /*# sourceMappingURL=GlobalElements.css.map */

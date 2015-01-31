@@ -1,12 +1,62 @@
 ﻿@import "GlobalElements";
 @import "DesignScheme";
+@import "ResponsiveMixin";
 
-
+$active-bar-height: 10px;
 
 /*Layout*/
 body {
     background: $site-background;
 }
+
+.mobile-top-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    background: rgba(0, 00, 0, 0.5);
+    height: 50px;
+    z-index: 50000;
+    .logo {
+        margin-top: 10px;
+        background: url(/Content//Images/logo.png) no-repeat;
+        display: inline-block;
+        background-size: 100%;
+        width: 250px;
+        height: 70px;
+    }
+}
+
+.sidebar-offcanvas {
+    padding-top: 50px;
+    ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        li {
+            display: block;
+            border-bottom: 2px solid $blue-light;
+            font-size: 1.25em;
+            a {
+                display: block;
+                line-height: 50px;
+                height: 50px;
+                padding-left: 10px;
+                &:hover {
+                    border-left: 5px solid $yellow;
+                    padding-left:5px;
+                } 
+
+            }
+            &.active a {
+                border-left: 5px solid $yellow;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
 .main-menu-bar {
     position: relative;
     height: 100px;
@@ -24,7 +74,7 @@ body {
         }
 
         ul.main-menu {
-            $active-bar-height: 10px;
+            
 
             height: 70px;
             background-color: $blue-default;
@@ -64,6 +114,12 @@ body {
     position: relative;
     //Site offset is the .main-menu-wrapper height + margin-top
     top: -170px;
+
+    @include Tablets {
+        top: 0;
+    }
+
+    
     footer {
         background: $blue-light;
         height: 80px;
@@ -76,6 +132,10 @@ body {
 /*Front page*/
 .front-page {
     margin-top: $gutter-size;
+
+    @include Phones {
+        margin-top: $content-page-top-margin;
+    }
     .content {
     }
 
@@ -84,7 +144,7 @@ body {
         iframe {
             display: block;
             margin: 0 auto;
-            padding: 10px 0;
+            padding: 10px;
         }
 
     }

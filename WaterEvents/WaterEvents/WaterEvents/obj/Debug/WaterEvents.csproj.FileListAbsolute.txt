@@ -79,3 +79,9 @@ C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\
 C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\System.Web.Http.WebHost.dll
 C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\System.Web.Http.WebHost.xml
 C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\APE.Umbraco.dll
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\Postmark.Convenience.dll
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\Postmark.dll
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\Postmark.pdb
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\Postmark.xml
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\Postmark.Convenience.pdb
+C:\Users\Mads\Documents\GitHub\Water-events\WaterEvents\WaterEvents\WaterEvents\bin\Postmark.Convenience.xml

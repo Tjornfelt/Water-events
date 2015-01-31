@@ -19,6 +19,7 @@ namespace WaterEvents.Classes.Cms
 			this.SlideshowFolder = new MediaProperty(){ Alias = "slideshowFolder" };
 			this.Header = new StringProperty(){ Alias = "header" };
 			this.BodyText = new HtmlStringProperty(){ Alias = "bodyText" };
+			this.FacebookLink = new StringProperty(){ Alias = "facebookLink" };
 				
 		}
 
@@ -45,6 +46,12 @@ namespace WaterEvents.Classes.Cms
 		/// <summary>
 		///		<para>Datatype: Richtext editor</para>
 		/// </summary>
-		public HtmlStringProperty BodyText { get; private set; }
+		public HtmlStringProperty BodyText { get; private set; }		
+				
+		/// <summary>
+		///		<para>Datatype: Textstring</para>
+		///		<para>Description: Indtast URL'en til facebook siden.</para>
+		/// </summary>
+		public StringProperty FacebookLink { get; private set; }
 	}
 }
