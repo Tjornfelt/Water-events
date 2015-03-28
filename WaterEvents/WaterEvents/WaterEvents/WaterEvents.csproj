@@ -240,6 +240,9 @@
     <Compile Include="Classes\Cms\Items.cs">
       <DependentUpon>Umbraco.DocTypes.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Cms\Link.cs">
+      <DependentUpon>Umbraco.DocTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Cms\Location.cs">
       <DependentUpon>Umbraco.DocTypes.tt</DependentUpon>
     </Compile>
@@ -336,6 +339,7 @@
     </Content>
     <Content Include="Content\Images\facebook-logo.png" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\picccc.jpg" />
     <Content Include="Content\Images\site-bg.jpg" />
     <Content Include="css\dummy.txt" />
     <Content Include="default.aspx" />

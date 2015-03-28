@@ -16,6 +16,8 @@ namespace WaterEvents.Classes.Cms
 
 		public Master()		
 		{
+			this.SeoTitle = new StringProperty(){ Alias = "seoTitle" };
+			this.SeoDescription = new StringProperty(){ Alias = "seoDescription" };
 				
 		}
 
@@ -25,6 +27,18 @@ namespace WaterEvents.Classes.Cms
 		{
 			return "Master";
 		}
-	 
+	 		
+				
+		/// <summary>
+		///		<para>Datatype: Textstring</para>
+		///		<para>Description: Sidens primære titel. Bliver vist i browser tabben, samt kan blive brugt af google i søgeresultat listen.</para>
+		/// </summary>
+		public StringProperty SeoTitle { get; private set; }		
+				
+		/// <summary>
+		///		<para>Datatype: Textbox multiple</para>
+		///		<para>Description: Skriv en kortfattet beskrivelse af sidens indhold på max 160 tegn. Hjælper ikke på ranking direkte, men kan blive brugt af google som tekst på søgeresultat siden. En god beskrivende tekst kan derfor stadig have relevans for antal besøgende, hvilket på sigt kan betyde højere ranking. Kan være et uddrag af selve sidens indhold.</para>
+		/// </summary>
+		public StringProperty SeoDescription { get; private set; }
 	}
 }

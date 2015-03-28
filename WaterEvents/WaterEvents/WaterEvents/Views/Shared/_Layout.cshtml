@@ -11,11 +11,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-    <title>@ViewBag.Title</title>
+    <title>@global.SeoTitle</title>
+    <meta name="description" content="@global.SeoDescription" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/Css/Site.css" rel="stylesheet" />
 
@@ -24,12 +25,13 @@
 </head>
 <body>
 
+    @*
     <div style="position:fixed; bottom:0; height:20px; width: 100px; z-index: 1000;">
         <div class="hidden-xs hidden-sm" style="background: green;">Desktop</div>
         <div class="hidden-xs hidden-md hidden-lg" style="background:yellow;">Tablet</div>
         <div class="hidden-sm hidden-md hidden-lg" style="background:blue;">Phone</div>
     </div>
-
+        *@
     <div class="container-fluid mobile-top-bar hidden-md hidden-lg">
         <div class="row">
             <div class="col-xs-12">

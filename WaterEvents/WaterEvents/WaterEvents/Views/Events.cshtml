@@ -28,14 +28,14 @@
 @helper RenderEvent(WaterEvents.Models.HelperModels.EventModel ev)
 {
     <div class="row event">
-        <div class="col-sm-4">
+        <div class="col-sm-4 text-center">
             @if (ev.Image != null)
             {
                 <img src="@ev.Image.Url" alt="@ev.Image.Name" />
             }
             
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
             <h2>@ev.Header</h2>
             @ev.BodyText
             <a class="btn btn-default" href="/kontakt">Book nu!</a>

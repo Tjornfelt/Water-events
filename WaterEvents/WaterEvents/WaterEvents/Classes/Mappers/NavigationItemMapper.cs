@@ -26,13 +26,36 @@ namespace WaterEvents.Classes.Mappers
                     x.DocumentTypeAlias != DocTypes.Event)
                     )
                 {
-                    NavigationItem navItem = new NavigationItem() {
-                        Name = child.Name,
-                        Url = child.Url,
-                        Active = currentPage.Id == child.Id,
-                        Children = Map<NavigationItem>(child, currentPage)
-                    };
+
+                    NavigationItem navItem = null;
+                    if (child.DocumentTypeAlias == DocTypes.Link)
+                    {
+                        //Extract the node from the link
+                        var linkedNode = child.GetPropertyValue(DocTypes.Link.InternalLink);
+
+                        if (linkedNode != null)
+                        {
+                            navItem = new NavigationItem()
+                            {
+                                Name = child.Name,
+                                Url = linkedNode.Url
+                            };
+                        }
+
+                    }
+                    else
+                    {
+                        navItem = new NavigationItem()
+                        {
+                            Name = child.Name,
+                            Url = child.Url,
+                            Active = currentPage.Id == child.Id,
+                            Children = Map<NavigationItem>(child, currentPage)
+                        };
+                    }
+
                     navigationItems.Add((T)navItem);
+                    
                 }
             }
 

@@ -24,8 +24,8 @@ namespace WaterEvents.Controllers.SurfaceControllers
 
             string from = currentNode.GetPropertyValue(DocTypes.Contactpage.From); //from is also the form administrator
             string to = form.Email;
-            MailMessage mailUser = new MailMessage(from, to);
-            MailMessage mailAdmin = new MailMessage(from, from);
+            MailMessage mailUser = new MailMessage(from, form.Email);
+            MailMessage mailAdmin = new MailMessage(form.Email, to);
 
             mailUser.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);
             mailAdmin.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);

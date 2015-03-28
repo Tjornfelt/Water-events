@@ -23,7 +23,9 @@ namespace WaterEvents.Controllers
             ViewBag.Global = new GlobalModel
             {
                 CarouselActive = CurrentPage.IsDocumentType(DocTypes.FrontPage),
-                MainMenu = NavigationItemMapper.Map<NavigationItem>(frontPage, CurrentPage)
+                MainMenu = NavigationItemMapper.Map<NavigationItem>(frontPage, CurrentPage),
+                SeoTitle = CurrentPage.GetPropertyValue(DocTypes.FrontPage.SeoTitle),
+                SeoDescription = CurrentPage.GetPropertyValue(DocTypes.FrontPage.SeoDescription)
             };
 
             //Move all "Global content" into the viewbag - it shouldnt be accessible in the model

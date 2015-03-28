@@ -10,5 +10,7 @@ namespace WaterEvents.Models
     {
         public bool CarouselActive { get; set; }
         public IEnumerable<NavigationItem> MainMenu { get; set; }
+        public string SeoTitle { get; set; }
+        public string SeoDescription { get; set; }
     }
 }

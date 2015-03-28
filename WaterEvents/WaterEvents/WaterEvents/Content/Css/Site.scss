@@ -7,6 +7,7 @@ $active-bar-height: 10px;
 /*Layout*/
 body {
     background: $site-background;
+    color: $black;
 }
 
 .mobile-top-bar {
@@ -86,7 +87,7 @@ body {
                 line-height: 70px;
                 float: left;
                 text-align: center;
-                border-right: 1px solid $blue-light;
+                border-right: 1px solid $menu-border;
                 &:last-child {
                         border-right: none;
                     }
@@ -94,6 +95,8 @@ body {
                     display: block;
                     height: 70px;
                     color: $white;
+                    font-size: 1.3em;
+                    font-weight: bold;
                     
                 
                     &:hover {
@@ -157,7 +160,7 @@ body {
             background: $grayish-blue;
             padding: 35px;
             p {
-                font-size: 1.3em;
+                font-size: 1.5em;
                 color: $white;
                 span {
                     font-size: 1.5em;
@@ -168,7 +171,7 @@ body {
                 padding-left: 150px;
                 height: 104px;
                 font-size: 3.5em;
-                color: $white;
+                color: $facebook-blue;
 
             }
         }
@@ -177,6 +180,7 @@ body {
     .call-to-action {
         padding: 15px;
         h2 {
+            font-size: 1.45em;
             color: $yellow;
             margin-bottom: 470px;
         }
@@ -185,7 +189,7 @@ body {
 
 /*The carousel is outside the front-page wrapper, but is still considered part of the front page*/
 #carousel {
-    height: 470px;
+    height: 430px;
     .carousel-inner {
         .item {
             height: 470px;
