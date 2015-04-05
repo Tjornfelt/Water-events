@@ -23,14 +23,18 @@ namespace WaterEvents.Controllers.SurfaceControllers
 
 
             string from = currentNode.GetPropertyValue(DocTypes.Contactpage.From); //from is also the form administrator
-            string to = form.Email;
-            MailMessage mailUser = new MailMessage(from, form.Email);
-            MailMessage mailAdmin = new MailMessage(form.Email, to);
+            string adminMail = currentNode.GetPropertyValue(DocTypes.Contactpage.To);
+            string userEmail = form.Email;
+            MailMessage mailUser = new MailMessage(from, userEmail);
+            MailMessage mailAdmin = new MailMessage(from, adminMail);
 
             mailUser.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);
             mailAdmin.Subject = currentNode.GetPropertyValue(DocTypes.Contactpage.Subject);
             mailUser.IsBodyHtml = true;
             mailAdmin.IsBodyHtml = true;
+
+            MailAddress replyAddress = new MailAddress(userEmail);
+            mailAdmin.ReplyTo = replyAddress;
             
 
             var replacedTemplate = template.Replace("##name##", form.Name);
