@@ -254,6 +254,7 @@ body {
 .contact-page form textarea {
   height: 200px; }
 .contact-page form #thanks {
+  margin: 50px 0;
   display: none; }
 .contact-page form .field-validation-error {
   display: block;

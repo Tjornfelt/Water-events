@@ -26,6 +26,7 @@ namespace WaterEvents.Controllers
                 ContactForm = new ContactFormModel()
             };
             model.ContactForm.ID = CurrentPage.Id.ToString();
+            model.ContactForm.ThanksText = CurrentPage.GetPropertyValue(DocTypes.Contactpage.Thanks);
             return View(model);
         }
     }

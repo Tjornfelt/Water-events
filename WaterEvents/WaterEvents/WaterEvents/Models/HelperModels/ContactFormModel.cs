@@ -50,5 +50,7 @@ namespace WaterEvents.Models.HelperModels
         [Display(Name = "Besked*")]
         public string Message { get; set; }
 
+        public string ThanksText { get; set; }
+
     }
 }
