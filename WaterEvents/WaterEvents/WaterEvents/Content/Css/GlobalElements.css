@@ -11,7 +11,8 @@ body {
   font-family: Calibri; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto !important; }
 
 .row-no-margin {
   margin: 0; }

@@ -11,7 +11,8 @@ body {
   font-family: Calibri; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto !important; }
 
 .row-no-margin {
   margin: 0; }
@@ -118,6 +119,8 @@ body {
 .sidebar-offcanvas {
   padding-top: 50px; }
   .sidebar-offcanvas ul {
+    position: fixed;
+    top: 50px;
     width: 100%;
     padding: 0;
     margin: 0; }
@@ -127,8 +130,8 @@ body {
       font-size: 1.25em; }
       .sidebar-offcanvas ul li a {
         display: block;
-        line-height: 50px;
-        height: 50px;
+        line-height: 40px;
+        height: 40px;
         padding-left: 10px; }
         .sidebar-offcanvas ul li a:hover {
           border-left: 5px solid #ffea21;
