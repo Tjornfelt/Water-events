@@ -11,12 +11,11 @@ body {
 }
 
 .mobile-top-bar {
-    position: fixed;
     width: 100%;
     top: 0;
     padding-top: 10px;
     padding-left: 10px;
-    background: rgba(0, 00, 0, 0.5);
+    background:#d0dde8;// rgba(0, 00, 0, 0.5);
     height: 50px;
     z-index: 50000;
     .logo {
@@ -29,14 +28,18 @@ body {
     }
 }
 
+.site-offset.active {
+    .sidebar-offcanvas {
+        //left: 45%;
+    }
+} 
+
 .sidebar-offcanvas {
-    padding-top: 50px;
     ul {
-        position: fixed;
-        top: 50px;
         width: 100%;
         padding: 0;
         margin: 0;
+        
         li {
             display: block;
             border-bottom: 2px solid $blue-light;

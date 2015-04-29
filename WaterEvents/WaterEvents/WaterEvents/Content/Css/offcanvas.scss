@@ -12,12 +12,13 @@ body {
  * --------------------------------------------------
  */
 @media screen and (max-width: 991px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: right .25s ease-out;
-         -o-transition: right .25s ease-out;
-            transition: right .25s ease-out;
-  }
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: right .25s ease-out;
+        -o-transition: right .25s ease-out;
+        -moz-transition: right .25s ease-out;
+        transition: right .25s ease-out;
+    }
 
   .row-offcanvas-right {
     right: 0;

@@ -15,6 +15,7 @@ html, body {
     position: relative;
     -webkit-transition: right 0.25s ease-out;
     -o-transition: right 0.25s ease-out;
+    -moz-transition: right 0.25s ease-out;
     transition: right 0.25s ease-out; }
   .row-offcanvas-right {
     right: 0; }
